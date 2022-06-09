@@ -5,21 +5,21 @@
 class Hub < Formula
   desc "Hub CLI is stack composition and lifecycle tool."
   homepage "https://superhub.io/"
-  version "1.0.8"
+  version "1.0.9"
   license "GPLv3"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/agilestacks/hub/releases/download/v1.0.8/hub_Darwin_x86_64.tar.gz"
-      sha256 "c758a9a9bd73bb2cdda2522771ec100922f46293e4454380f2a73e9caa600514"
+    if Hardware::CPU.arm?
+      url "https://github.com/agilestacks/hub/releases/download/v1.0.9/hub_Darwin_arm64.tar.gz"
+      sha256 "eb25e7ce05a24d0199dc4cfc5aa00d882e1e1ce09cff69b1efcd1d223827d7f0"
 
       def install
         bin.install "hub"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/agilestacks/hub/releases/download/v1.0.8/hub_Darwin_arm64.tar.gz"
-      sha256 "3bf6c28957a02e59a4c1dd46347afe19147463e2fa61b27d0e9d9dfe8ed074e0"
+    if Hardware::CPU.intel?
+      url "https://github.com/agilestacks/hub/releases/download/v1.0.9/hub_Darwin_x86_64.tar.gz"
+      sha256 "d7127fa1acc8bceadd0d895544d6cf69a35b41a1b853dac5f01512e31f043cf4"
 
       def install
         bin.install "hub"
@@ -29,16 +29,16 @@ class Hub < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/agilestacks/hub/releases/download/v1.0.8/hub_Linux_arm64.tar.gz"
-      sha256 "57a89aa3715378e59214f569b5a2adae4cf754a74078f66b6c4218e9e6e2dae4"
+      url "https://github.com/agilestacks/hub/releases/download/v1.0.9/hub_Linux_arm64.tar.gz"
+      sha256 "7da2e9407c94e0c2128553f357e56af5c184c587ba151d263293c21f7f9fc980"
 
       def install
         bin.install "hub"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/agilestacks/hub/releases/download/v1.0.8/hub_Linux_x86_64.tar.gz"
-      sha256 "b00fc9f7a40bd29c0e9bfe54eab85adcd0bc4948cbfe4246e6906b9b30abf409"
+      url "https://github.com/agilestacks/hub/releases/download/v1.0.9/hub_Linux_x86_64.tar.gz"
+      sha256 "729782d421c7aa6f855cb966d66099b76b5d9a49ac376d04da8825427c8a4c20"
 
       def install
         bin.install "hub"
