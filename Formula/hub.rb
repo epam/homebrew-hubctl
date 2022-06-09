@@ -5,21 +5,21 @@
 class Hub < Formula
   desc "Hub CLI is stack composition and lifecycle tool."
   homepage "https://superhub.io/"
-  version "1.0.7"
+  version "1.0.8"
   license "GPLv3"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/agilestacks/hub/releases/download/v1.0.7/hub_Darwin_arm64.tar.gz"
-      sha256 "31b8964a5164fab5d78dff96680033ca0ca439ec0677b7d4c4372a540c8f3b05"
+    if Hardware::CPU.intel?
+      url "https://github.com/agilestacks/hub/releases/download/v1.0.8/hub_Darwin_x86_64.tar.gz"
+      sha256 "c758a9a9bd73bb2cdda2522771ec100922f46293e4454380f2a73e9caa600514"
 
       def install
         bin.install "hub"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/agilestacks/hub/releases/download/v1.0.7/hub_Darwin_x86_64.tar.gz"
-      sha256 "36390716d6233ab1a3c9535269f837b026e1f5ae0efbb23357183a6845176af1"
+    if Hardware::CPU.arm?
+      url "https://github.com/agilestacks/hub/releases/download/v1.0.8/hub_Darwin_arm64.tar.gz"
+      sha256 "3bf6c28957a02e59a4c1dd46347afe19147463e2fa61b27d0e9d9dfe8ed074e0"
 
       def install
         bin.install "hub"
@@ -28,17 +28,17 @@ class Hub < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/agilestacks/hub/releases/download/v1.0.7/hub_Linux_x86_64.tar.gz"
-      sha256 "e471c113a0deda0eeb54a2293fb952a8e5073b430921b4d9d643ddb211991e04"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/agilestacks/hub/releases/download/v1.0.8/hub_Linux_arm64.tar.gz"
+      sha256 "57a89aa3715378e59214f569b5a2adae4cf754a74078f66b6c4218e9e6e2dae4"
 
       def install
         bin.install "hub"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/agilestacks/hub/releases/download/v1.0.7/hub_Linux_arm64.tar.gz"
-      sha256 "0eaf875e739fad0e4d584da01f11137a1633c0c2beb4dba04abd2c7eae954979"
+    if Hardware::CPU.intel?
+      url "https://github.com/agilestacks/hub/releases/download/v1.0.8/hub_Linux_x86_64.tar.gz"
+      sha256 "b00fc9f7a40bd29c0e9bfe54eab85adcd0bc4948cbfe4246e6906b9b30abf409"
 
       def install
         bin.install "hub"
