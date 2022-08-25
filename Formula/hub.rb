@@ -5,21 +5,21 @@
 class Hub < Formula
   desc "Hub CLI is stack composition and lifecycle tool."
   homepage "https://superhub.io/"
-  version "1.0.9"
+  version "1.0.10"
   license "GPLv3"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/agilestacks/hub/releases/download/v1.0.9/hub_Darwin_arm64.tar.gz"
-      sha256 "eb25e7ce05a24d0199dc4cfc5aa00d882e1e1ce09cff69b1efcd1d223827d7f0"
+      url "https://github.com/agilestacks/hub/releases/download/v1.0.10/hub_Darwin_arm64.tar.gz"
+      sha256 "7705b3debaa9961b31982f97a7219e62536704ccf53f48dafdac3017669b0a1e"
 
       def install
         bin.install "hub"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/agilestacks/hub/releases/download/v1.0.9/hub_Darwin_x86_64.tar.gz"
-      sha256 "d7127fa1acc8bceadd0d895544d6cf69a35b41a1b853dac5f01512e31f043cf4"
+      url "https://github.com/agilestacks/hub/releases/download/v1.0.10/hub_Darwin_x86_64.tar.gz"
+      sha256 "1b7e97662fe760be0194aa40c35e41cfc85df4636492ea765c82d76723829909"
 
       def install
         bin.install "hub"
@@ -29,16 +29,16 @@ class Hub < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/agilestacks/hub/releases/download/v1.0.9/hub_Linux_arm64.tar.gz"
-      sha256 "7da2e9407c94e0c2128553f357e56af5c184c587ba151d263293c21f7f9fc980"
+      url "https://github.com/agilestacks/hub/releases/download/v1.0.10/hub_Linux_arm64.tar.gz"
+      sha256 "8452e8e48f1a625ae5db56590f589032f0ab1449371a85f75c80b4c80190a521"
 
       def install
         bin.install "hub"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/agilestacks/hub/releases/download/v1.0.9/hub_Linux_x86_64.tar.gz"
-      sha256 "729782d421c7aa6f855cb966d66099b76b5d9a49ac376d04da8825427c8a4c20"
+      url "https://github.com/agilestacks/hub/releases/download/v1.0.10/hub_Linux_x86_64.tar.gz"
+      sha256 "02d71496d1197db0809976a51aadc3151410cd501242f27a42e31e2bd5866744"
 
       def install
         bin.install "hub"
