@@ -3,7 +3,7 @@
 To install Agile Stacks Hub CLI run:
 
 ```bash
-brew tap agilestacks/tap
+brew tap epam/hubctl
 brew install epam/tap/hubctl
 ```
 
