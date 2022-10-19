@@ -1,4 +1,4 @@
-# Agile Stacks Homebrew tap
+# `hubctl` homebrew tap
 
 To install Agile Stacks Hub CLI run:
 
