@@ -5,7 +5,7 @@
 class Hubctl < Formula
   desc "Hub CTL is stack composition and lifecycle tool."
   homepage "https://superhub.io/"
-  version "1.0.12"
+  version "1.0.13"
   license "MPL-2.0"
 
   depends_on "jq"
@@ -14,16 +14,16 @@ class Hubctl < Formula
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/epam/hubctl/releases/download/v1.0.12/hubctl_Darwin_arm64.tar.gz"
-      sha256 "7033c365eea451cbac73bebedf035f42050a72f6bbb6c327ad672c15a6941201"
+      url "https://github.com/epam/hubctl/releases/download/v1.0.13/hubctl_Darwin_arm64.tar.gz"
+      sha256 "41a4284ff2ebc353dd84dd045ca6c8863871b2d16355bbb521e5bce2c6313ade"
 
       def install
         bin.install "hubctl"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/epam/hubctl/releases/download/v1.0.12/hubctl_Darwin_x86_64.tar.gz"
-      sha256 "451853693d7dd2025f947326297899f8684fa8f6ffada8ed57c1703a818d198e"
+      url "https://github.com/epam/hubctl/releases/download/v1.0.13/hubctl_Darwin_x86_64.tar.gz"
+      sha256 "54926180a4172266e6386f1335dafebf882189d8c08d90c0b108329e24c1d4e4"
 
       def install
         bin.install "hubctl"
@@ -33,16 +33,16 @@ class Hubctl < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/epam/hubctl/releases/download/v1.0.12/hubctl_Linux_arm64.tar.gz"
-      sha256 "7a8df93a0a32cda8b13d6de7153089db17c8d332804ae3d1b4ee25abc85298b9"
+      url "https://github.com/epam/hubctl/releases/download/v1.0.13/hubctl_Linux_arm64.tar.gz"
+      sha256 "38c42d3e7a5b6f642917bf5758aa9a1468dbf71628f9864d70aedca4c953dc04"
 
       def install
         bin.install "hubctl"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/epam/hubctl/releases/download/v1.0.12/hubctl_Linux_x86_64.tar.gz"
-      sha256 "9ab7baec2a14723e8cfe18000d8f41e7e392b77540714db136934c8dba91ca69"
+      url "https://github.com/epam/hubctl/releases/download/v1.0.13/hubctl_Linux_x86_64.tar.gz"
+      sha256 "22e6dad493601d166c2e4ea5638d5982e7d4cf901160ee142dc313d2a71ecfda"
 
       def install
         bin.install "hubctl"
